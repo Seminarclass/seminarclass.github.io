@@ -1,0 +1,526 @@
+body {
+    font-size: 93%;
+    background-color: #222;
+    color: #FFFFFF;
+    font-family: monospace;
+}
+
+
+
+p{
+  block-size: 15%;
+}
+
+
+t{
+  color: white;
+  font-family: monospace;
+  font-size: 100%;
+}
+
+
+a{
+  color: #F4F4F4;
+}
+
+
+a1{
+  color: #9AA6A2;
+}
+
+
+::selection{
+  color: #00FFAC;
+}
+
+
+h1{
+  font-size: 12pt;
+  text-align: center;
+  font-family: fantasy;
+}
+
+
+
+h2{
+  font-size: 9.1pt;
+  text-align: right;
+}
+
+
+h4 {
+  font-size: 15px;
+  font-family: fantasy;
+  text-align: center;
+  color: #FEFF00;
+}
+
+
+
+
+
+ .name {
+   font-family: fantasy;
+   color: #ffffff;
+   font-size: 13px;
+   font-weight: 600;
+   letter-spacing: 3px;
+   line-height: 19px;
+   text-transform: uppercase;
+ }
+   
+ .name span {
+   display: table;
+   padding: 0 4px;
+   padding: 0 0 0 4px;
+   background-color: #000000;
+ }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+  font-size: 70%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 319px;
+  display: table;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: red;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 34%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 70%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-container {
+    height: 160px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+.img-container img {
+    transform: skew(0deg);
+    height: 130px;
+    width: 150px;
+  }
+
+.inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 3deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 120px;
+    width: 120px;
+  }
+
+.text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: #04bcff;
+    font-size: 18px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav2 {
+  font-size: 90%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 300px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  
+  font-family: fantasy;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 19px;
+  text-transform: uppercase;
+  background-color: #000000;
+}
+
+nav2 a {
+  width: 100%;
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #CDD0CE;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Made in India*/
+.made {
+  position: absolute;
+  color: whitesmoke;
+  font-family: fantasy;
+  font-weight: 600;
+  font-size: 12.3px;
+}
+
+.m{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.green {
+  color: #16a085;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Notgivenlinks*/
+#Notgivenlinks {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  display: block;
+  bottom: -50px;
+}
+
+#flip {
+  height:29.5px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:40px;
+  margin-bottom:48px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+} 
+
+#flip div div {
+  background: #00E7FF;
+}
+#flip div:first-child div {
+  background: red;
+}
+#flip div:last-child div {
+  background: #9327E7;
+}
+
+@keyframes show {
+  0% {margin-top:-20px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+
+
+
+
+
+
+
+
+
+/*Page scroll progress bar*/
+
+.progress {
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progress 1s linear;
+
+}
+
+@keyframes progress {
+  to {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    width: 100%;
+
+  }
+}
+
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* domain list */
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  position: absolute;
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;
+  font-size: 10px;
+}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
+
+
+
+
+
+
+
+
+
