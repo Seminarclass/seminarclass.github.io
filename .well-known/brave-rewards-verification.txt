@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: gitdev.me
-Token: a0db4aab32c96a0a193029eede769b7cf9788b8eda8656ab8b4e842e43e23fc9
