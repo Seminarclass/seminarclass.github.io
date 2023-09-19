@@ -5,7 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
     <style>
-        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #shortenedUrl {
+            text-align: center;
+            font-weight: bold;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -51,11 +96,12 @@
                 });
 
                 xhr.open('GET', `https://url-link-shortener.p.rapidapi.com/v1/links/new?destination=${encodeURIComponent(longUrl)}`);
-                xhr.setRequestHeader('X-RapidAPI-Key', '148fa51a32msh8ac6f9b96bb6eb5p1039b8jsn67b983ca1892');
+                xhr.setRequestHeader('X-RapidAPI-Key', 'b5a44c37ca0b4898b1fc61c23920eefd'); // Replace with your new API key
                 xhr.setRequestHeader('X-RapidAPI-Host', 'url-link-shortener.p.rapidapi.com');
                 xhr.send();
             });
         });
     </script>
 </body>
-</html>
+    </html>
+    
