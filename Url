@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <label for="longUrl">Enter a Long URL:</label>
+    <input type="text" id="longUrl" placeholder="https://example.com">
+    <button id="shortenButton">Shorten</button>
+    <p>Shortened URL:</p>
+    <div id="shortenedUrl"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const shortenButton = document.getElementById('shortenButton');
+            const longUrlInput = document.getElementById('longUrl');
+            const shortenedUrlDiv = document.getElementById('shortenedUrl');
+
+            shortenButton.addEventListener('click', function () {
+                const longUrl = longUrlInput.value;
+
+                if (longUrl.trim() === '') {
+                    alert('Please enter a valid URL.');
+                    return;
+                }
+
+                const xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+
+                xhr.addEventListener('readystatechange', function () {
+                    if (this.readyState === this.DONE) {
+                        if (this.status === 200) {
+                            try {
+                                const response = JSON.parse(this.responseText);
+                                const shortenedUrl = response.data.link;
+                                shortenedUrlDiv.textContent = shortenedUrl;
+                            } catch (error) {
+                                alert('Error parsing API response.');
+                                console.error(error);
+                            }
+                        } else {
+                            alert('Error from API: ' + this.status);
+                        }
+                    }
+                });
+
+                xhr.open('GET', `https://url-link-shortener.p.rapidapi.com/v1/links/new?destination=${encodeURIComponent(longUrl)}`);
+                xhr.setRequestHeader('X-RapidAPI-Key', '148fa51a32msh8ac6f9b96bb6eb5p1039b8jsn67b983ca1892');
+                xhr.setRequestHeader('X-RapidAPI-Host', 'url-link-shortener.p.rapidapi.com');
+                xhr.send();
+            });
+        });
+    </script>
+</body>
+</html>
